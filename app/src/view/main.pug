@@ -1,0 +1,51 @@
+- var films = [{time: '2:14:33', title: 'Black Panther', text: 'At first glance, you can decide that Wakanda is an ordinary territory of wild Africa, but this is not so. Here, in the bowels of the desert lands, there are hidden deposits of a unique metal capable of absorbing...', img: 'img/film1.jpg'}, {time: '2:32:13', title: 'The Dark Knight', text: 'Batman raises stakes in the war on crime. With the help of Lieutenant Jim Gordon and Attorney Harvey Dent, he intends to clear the streets of crime that is poisoning the city. The cooperation is effective, but soon they...', img: 'img/film2.jpg'},{time: '1:53:45', title: 'The Gentlemen', text: 'One cunning American, from his student years, had been selling drugs, and now he came up with a scheme of illegal enrichment using the estates of an impoverished English aristocracy and made a very good fortune on ...', img: 'img/film3.jpg'},{time: '2:58:20', title: 'The Lord of the...', text: 'Tales of Middle-earth is a chronicle of the Great War for the Ring, a war that lasted more than one thousand years. The one who owned the Ring received power over all living creatures, but was obliged to serve evil...', img: 'img/film4.jpg'}]
+
+-var trailer = [{title: 'All Marvel Films', img: 'img/t1.jpg'},{title: 'Fast and the Furious', img: 'img/t2.jpg'},{title: 'Star Wars', img: 'img/t3.jpg'}]
+
+-var n = 0
+
+main.main 
+    .films 
+        .container 
+            h2.title Films
+            .films__content.row 
+                each val in films 
+                    .films__card 
+                        .films__info
+                            span.fad.fa-play.films__info-icon
+                            span.films__info-time= val.time
+                            h3.films__info-title= val.title 
+                            p.films__info-text= val.text
+                        img.films__img(src= val.img, alt= val.img)
+
+    .video
+        .video__info 
+            .container 
+                img.video__img(src="img/widow.png", alt="")
+                p.video__text After the events at the Leipzig-Halle airport, Natasha was overtaken by the mistakes of the past. The Red Room again made itself felt - a program to create Widows - professional killers and spies - just like her. Natasha decides once and for all to deal with people whose efforts she herself became a Widow.
+                a.btn(href="#!") Watch now
+        video.video__src(src="video/video.mp4", autoplay, muted, loop) 
+
+    .collections 
+        .container 
+            h2.title Collections
+            .collections__items.row 
+                each card in trailer 
+                    .collections__card 
+                        .collections__info 
+                            span.fad.fa-play.collections__info-icon
+                            h3.collections__info-title= card.title
+                        img.collections__img(src= card.img, alt="")
+
+    .series 
+        .container 
+            h2.title Series
+            .series__grid 
+                 while n < 6
+                    .series__item 
+                        .series__info 
+                            span.fad.fa-play.series__info-icon
+                            h3.series__info-title 
+                            p.series__info-text
+                            a.btn Watch now
+                        img.series__img(src="", alt= n++)

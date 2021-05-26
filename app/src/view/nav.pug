@@ -1,0 +1,11 @@
+nav.nav 
+    .container 
+        a.logo(href="#!")
+            img.logo__img(src="img/logo.png", alt="logo")
+            | CINEMAS
+        .nav__wrapper 
+            span.fas.fa-caret-circle-down.nav__btn
+            ul.nav__menu
+                each val in ['Films','Serials','Cartoons','Collections']
+                    li 
+                        a.nav__menu-link(href="#!")= val 

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container{
+    @include container()
+}
+
+.row {
+    @include row()
+}
+
+.btn {
+    background: $btn-bg;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 12px;
+    padding: 17px 48px;
+    border-radius: 4px;
+    color: black;
+    font-family: 'R';
+    font-weight: 500;
+    transition: background 250ms, color 250ms;
+}
+
+.btn:hover {
+    background: $btn-hover-bg;
+    color: $main-color;
+}
+
+.title {
+    color: $title;
+    font-family: 'C';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    border-bottom: 2px solid $title;
+    padding-bottom: 10px;
+    width: max-content;
+}

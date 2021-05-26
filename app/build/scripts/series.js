@@ -1,0 +1,1 @@
+"use strict";fetch("https://vue-cinema-api.herokuapp.com/api/info").then(function(a){return a.json()}).then(function(a){for(var b=document.querySelectorAll(".series__img"),c=document.querySelectorAll(".series__info-title"),d=document.querySelectorAll(".series__info-text"),e=0;e<a.length;e++)b[e].setAttribute("src",a[e].img),c[e].innerText=a[e].title,d[e].innerText=a[e].text});
